@@ -1,5 +1,5 @@
 # CALAMITA_Text-to-SQL
-This repository contains the instruction for evaluating Text-to-SQL performances achieved by a language model on Termite Dataset
+This repository contains the instruction for evaluating Text-to-SQL performances achieved by a language model on Termite Dataset.
 
 # Database Import Procedure:
 
@@ -26,8 +26,21 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 - the translation prompt template is the following: "Traduci in SQL la seguente query in linguaggio naturale : {original}" where original is a natural language query related to the database considered in the context (found in queries.json by looking at fields "db_id" and "original") 
 - the model should return a text containing the sql query.
 
-  # Text-to-SQL Evaluation:
+# Memorize generated queries:
+- after the submission of each translation prompt the model should return a text containing the sql query.
+- the element to be evaluated is just the sql query, so it's needed a method (possibly a python script) to extract the just the sql code from the text response. This method can vary from one model to another.
+- in this case all generated queries needs to be stored inside a txt files in the following folder \eval\db_.
 
+# Text-to-SQL Evaluation:
+- after the submission of each translation prompt the model should return a text containing the sql query.
+- the element to be evaluated is just the sql query, so it's needed a method (possibly a python script) to extract the just the sql code from the text response. This method can vary from one model to another.
+- each sql query generated needs to be evaluated whether it is correct or not.
+- the evaluation metric adopted is Execution Accuracy.
+- Execution Accuracy method consists in verifying whether the records returned by the generated query are the same returned by the gold query.
+- In order to perform this method over generated queries it is needed a python script that automatically execute both the gold and generated sql query (whether it is executable in absence of syntax errors) and compare the records returned.
+- evaluation.py do that for us.
+- evaluation.py is a python script that fundamentally works over a set of database stored in local environment to which it connects and over a set 2 text files.
+- hence , given a db stored in local environment,  
   
 
 
