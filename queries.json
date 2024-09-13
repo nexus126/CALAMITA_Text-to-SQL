@@ -876,52 +876,52 @@
     {
         "db_id": "farmacia",
         "original": "Calcola il ricavo medio dell'anno 2020 per ogni farmacia indicandone il nome e la partita iva.",
-        "query": "SELECT farmacie.nome_negozio, farmacie.partita_iva, AVG(`totale`) as ricavo_megio FROM vendite JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE vendite.data_fatturazione >= '2020-01-01' AND vendite.data_fatturazione <= '2020-12-31' GROUP BY negozio;"
+        "query": "SELECT farmacie.nome_negozio, farmacie.partita_iva, AVG('totale') as ricavo_megio FROM vendite JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE vendite.data_fatturazione >= '2020-01-01' AND vendite.data_fatturazione <= '2020-12-31' GROUP BY negozio;"
     },
     {
         "db_id": "farmacia",
         "original": "Seleziona per ogni farmacia, indicandone il nome, il numero dei prodotti che hanno venduto della casa '3A HEALTH CARE S.R.L.'",
-        "query": "SELECT farmacie.nome_negozio, COUNT(prodotti.cod_identificativo) FROM farmacie JOIN vendite ON vendite.negozio = farmacie.partita_iva JOIN prodotti ON vendite.prodotto = prodotti.cod_identificativo WHERE `casaProduzione`='3A HEALTH CARE S.R.L.' GROUP BY(farmacie.partita_iva);"
+        "query": "SELECT farmacie.nome_negozio, COUNT(prodotti.cod_identificativo) FROM farmacie JOIN vendite ON vendite.negozio = farmacie.partita_iva JOIN prodotti ON vendite.prodotto = prodotti.cod_identificativo WHERE 'casaProduzione'='3A HEALTH CARE S.R.L.' GROUP BY(farmacie.partita_iva);"
     },
     {
         "db_id": "farmacia",
         "original": "Quante farmacie ci sono a Roma?",
-        "query": "SELECT COUNT(*) FROM `farmacie` WHERE `nomeComune`='Roma';"
+        "query": "SELECT COUNT(*) FROM 'farmacie' WHERE 'nomeComune'='Roma';"
     },
     {
         "db_id": "farmacia",
         "original": "Calcola il prezzo medio dei prodotti venduti",
-        "query": "SELECT AVG(totale) FROM `vendite`"
+        "query": "SELECT AVG(totale) FROM 'vendite'"
     },
     {
         "db_id": "farmacia",
         "original": "Calcola il prezzo medio dei prodotti",
-        "query": "SELECT AVG(prezzo_eu) FROM `prodotti`"
+        "query": "SELECT AVG(prezzo_eu) FROM 'prodotti'"
     },
     {
         "db_id": "farmacia",
         "original": "Cosa produce la casa '3A HEALTH CARE S.R.L.'?",
-        "query": "SELECT * FROM `prodotti` WHERE casaProduzione='3A HEALTH CARE S.R.L.'"
+        "query": "SELECT * FROM 'prodotti' WHERE casaProduzione='3A HEALTH CARE S.R.L.'"
     },
     {
         "db_id": "farmacia",
         "original": "Quanti prodotti diversi ha venduto la farmacia 'Aleci Vincenzo'?",
-        "query": "SELECT COUNT(DISTINCT(prodotto)) FROM `vendite` JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE farmacie.nome_negozio = 'Aleci Vincenzo';"
+        "query": "SELECT COUNT(DISTINCT(prodotto)) FROM 'vendite' JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE farmacie.nome_negozio = 'Aleci Vincenzo';"
     },
     {
         "db_id": "farmacia",
         "original": "Anno per anno calcola quanti prodotti diversi ha venduto la farmacia 'Aleci Vincenzo'?",
-        "query": "SELECT COUNT(DISTINCT(prodotto)), YEAR(vendite.data_fatturazione) as anno_vendita FROM `vendite` JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE farmacie.nome_negozio = 'Aleci Vincenzo' GROUP BY anno_vendita;"
+        "query": "SELECT COUNT(DISTINCT(prodotto)), YEAR(vendite.data_fatturazione) as anno_vendita FROM vendite JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE farmacie.nome_negozio = 'Aleci Vincenzo' GROUP BY anno_vendita;"
     },
     {
         "db_id": "farmacia",
         "original": "Il numero di volte in cui ciscun prodotto e' stato venduto a Roma, riportandone anche la tipologia",
-        "query": "SELECT prodotti.tipologiaProd, prodotti.cod_identificativo, COUNT(*) as num_vendite FROM `vendite` JOIN prodotti ON vendite.prodotto = prodotti.cod_identificativo JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE farmacie.nomeComune = 'Roma' GROUP BY prodotti.tipologiaProd, prodotti.cod_identificativo"
+        "query": "SELECT prodotti.tipologiaProd, prodotti.cod_identificativo, COUNT(*) as num_vendite FROM vendite JOIN prodotti ON vendite.prodotto = prodotti.cod_identificativo JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE farmacie.nomeComune = 'Roma' GROUP BY prodotti.tipologiaProd, prodotti.cod_identificativo"
     },
     {
         "db_id": "farmacia",
         "original": "Per ogni comune e tipologia di prodotto riporta il numero totale di vendite nel corso del 2020",
-        "query": "SELECT farmacie.nomeComune, prodotti.tipologiaProd, COUNT(*) as num_vendite FROM `vendite` JOIN prodotti ON vendite.prodotto = prodotti.cod_identificativo JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE vendite.data_fatturazione >='2020-01-01' AND vendite.data_fatturazione <='2020-12-31' GROUP BY farmacie.nomeComune, prodotti.tipologiaProd;"
+        "query": "SELECT farmacie.nomeComune, prodotti.tipologiaProd, COUNT(*) as num_vendite FROM vendite JOIN prodotti ON vendite.prodotto = prodotti.cod_identificativo JOIN farmacie ON farmacie.partita_iva = vendite.negozio WHERE vendite.data_fatturazione >='2020-01-01' AND vendite.data_fatturazione <='2020-12-31' GROUP BY farmacie.nomeComune, prodotti.tipologiaProd;"
     },
     {
         "db_id": "recensioni",
