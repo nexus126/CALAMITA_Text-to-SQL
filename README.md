@@ -37,7 +37,7 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 - each sql query generated needs to be evaluated whether it is correct or not.
 - the evaluation metric adopted is Execution Accuracy.
 - Execution Accuracy method consists in verifying whether the records returned by the generated query are the same returned by the gold query.
-- In order to perform this method over generated queries it is needed a python script that automatically execute both the gold and generated sql query (whether it is executable in absence of syntax errors) and compare the records returned.
+- in order to perform this method over generated queries it is needed a python script that automatically execute both the gold and generated sql query (whether it is executable in absence of syntax errors) and compare the records returned.
 - evaluation.py do that for us.
 - evaluation.py is a python script that fundamentally works over a set of database stored in local environment to which it connects and over a set 2 text files.
 - hence , given a db stored in local environment, the evaluation script will compare the records returned by the gold sql queries file and the records returned by the generated sql queries file (that is basically Execution Accuracy).
