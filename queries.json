@@ -886,7 +886,7 @@
     {
         "db_id": "farmacia",
         "original": "Quante farmacie ci sono a Roma?",
-        "query": "SELECT COUNT(*) FROM 'farmacie' WHERE 'nomeComune'='Roma';"
+        "query": "SELECT COUNT(*) FROM farmacie WHERE 'nomeComune'='Roma';"
     },
     {
         "db_id": "farmacia",
