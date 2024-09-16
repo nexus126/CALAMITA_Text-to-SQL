@@ -761,12 +761,12 @@
     {
         "db_id": "galleria",
         "original": "Seleziona il nome di tutte le opere che Henri Matisse ha realizzato per Ščukin.",
-        "query": "SELECT opera.`nome` FROM `opera` JOIN Crea ON Crea.opera = opera.ID JOIN artista ON artista.ID = Crea.artista WHERE artista.nome = 'Henri' AND artista.cognome = 'Matisse' AND Crea.committente = 'Ščukin'"
+        "query": "SELECT Opera.nome FROM Opera JOIN Crea ON Crea.opera = Opera.ID JOIN artista ON artista.ID = Crea.artista WHERE artista.nome = 'Henri' AND artista.cognome = 'Matisse' AND Crea.committente = 'Ščukin'"
     },
     {
         "db_id": "galleria",
         "original": "Seleziona il museo che ospita il maggior numero di opere di Monet.",
-        "query": "SELECT opera.id_museo as museo, COUNT(opera.ID) as tot_opere FROM `opera` JOIN Crea ON opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' GROUP BY artista.ID, opera.id_museo ORDER BY tot_opere DESC LIMIT 1"
+        "query": "SELECT Opera.id_museo as museo, COUNT(Opera.ID) as tot_opere FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' GROUP BY artista.ID, Opera.id_museo ORDER BY tot_opere DESC LIMIT 1"
     },
     {
         "db_id": "galleria",
@@ -781,7 +781,7 @@
     {
         "db_id": "galleria",
         "original": "Conta il numero di opere richieste da ogni committente",
-        "query": "SELECT count(opera), committente FROM Crea GROUP BY committente;"
+        "query": "SELECT count(Opera), committente FROM Crea GROUP BY committente;"
     },
     {
         "db_id": "galleria",
@@ -791,7 +791,7 @@
     {
         "db_id": "galleria",
         "original": "Dimmi quante opere sono state create ogni anno",
-        "query": "SELECT anno_pubblicazione, count(anno_pubblicazione) FROM opera GROUP BY anno_pubblicazione;"
+        "query": "SELECT anno_pubblicazione, count(anno_pubblicazione) FROM Opera GROUP BY anno_pubblicazione;"
     },
     {
         "db_id": "galleria",
@@ -811,17 +811,17 @@
     {
         "db_id": "galleria",
         "original": "Dimmi le opere e la data di pubblicazione fatte da Monet ordinate per data",
-        "query": "SELECT opera.nome, opera.anno_pubblicazione FROM opera JOIN Crea ON opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' ORDER BY anno_pubblicazione DESC;"
+        "query": "SELECT Opera.nome, Opera.anno_pubblicazione FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' ORDER BY anno_pubblicazione DESC;"
     },
     {
         "db_id": "galleria",
         "original": "Dimmi il nome ed il cognome degli artisti che espongono nel museo 'Barnes Foundation' ordinate in ordine alfabetico per il cognome",
-        "query": "SELECT artista.nome, artista.cognome FROM opera JOIN Crea ON opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE opera.id_museo = 'Barnes Foundation' ORDER BY artista.cognome;"
+        "query": "SELECT artista.nome, artista.cognome FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE Opera.id_museo = 'Barnes Foundation' ORDER BY artista.cognome;"
     },
     {
         "db_id": "galleria",
         "original": "Dimmi le opere ad acquarello ed olio su tela che ha fatto monet e dove sono esposte ordinate per titolo",
-        "query": "SELECT opera.nome, opera.id_museo FROM opera JOIN Crea ON opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' AND opera.tecnica IN ('acquarello', 'olio su tela') ORDER BY opera.nome;"
+        "query": "SELECT Opera.nome, Opera.id_museo FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' AND Opera.tecnica IN ('acquarello', 'olio su tela') ORDER BY Opera.nome;"
     },
     {
         "db_id": "farmacia",
