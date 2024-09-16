@@ -1,7 +1,0 @@
-SELECT numero_volo,data,aeroporto FROM volo WHERE data >= '2020-05-1';	voli
-SELECT num_passaporto,naz FROM cliente WHERE gender = 'F';	voli
-SELECT MAX(num_posti) from aereo;	voli
-SELECT cliente.nome, cliente.cognome, biglietto.num_b FROM cliente JOIN biglietto ON cliente.num_passaporto = biglietto.num_passaporto WHERE cliente.gender != 'M';	voli
-SELECT modello_di_aereo from aereo ORDER BY modello_di_aereo	voli
-SELECT c.naz, COUNT(*) AS numero_persone FROM cliente c JOIN biglietto b ON c.num_passaporto = b.num_passaporto WHERE b.volo='BH9973' GROUP BY c.naz;	voli
-
