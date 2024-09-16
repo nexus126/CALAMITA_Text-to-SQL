@@ -761,12 +761,12 @@
     {
         "db_id": "galleria",
         "original": "Seleziona il nome di tutte le opere che Henri Matisse ha realizzato per Ščukin.",
-        "query": "SELECT Opera.nome FROM Opera JOIN Crea ON Crea.opera = Opera.ID JOIN artista ON artista.ID = Crea.artista WHERE artista.nome = 'Henri' AND artista.cognome = 'Matisse' AND Crea.committente = 'Ščukin'"
+        "query": "SELECT Opera.nome FROM Opera JOIN Crea ON Crea.opera = Opera.ID JOIN Artista ON Artista.ID = Crea.artista WHERE Artista.nome = 'Henri' AND Artista.cognome = 'Matisse' AND Crea.committente = 'Ščukin'"
     },
     {
         "db_id": "galleria",
         "original": "Seleziona il museo che ospita il maggior numero di opere di Monet.",
-        "query": "SELECT Opera.id_museo as museo, COUNT(Opera.ID) as tot_opere FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' GROUP BY artista.ID, Opera.id_museo ORDER BY tot_opere DESC LIMIT 1"
+        "query": "SELECT Opera.id_museo as museo, COUNT(Opera.ID) as tot_opere FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN Artista ON Artista.ID = Crea.artista WHERE Artista.cognome = 'Monet' GROUP BY Artista.ID, Opera.id_museo ORDER BY tot_opere DESC LIMIT 1"
     },
     {
         "db_id": "galleria",
@@ -811,17 +811,17 @@
     {
         "db_id": "galleria",
         "original": "Dimmi le opere e la data di pubblicazione fatte da Monet ordinate per data",
-        "query": "SELECT Opera.nome, Opera.anno_pubblicazione FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' ORDER BY anno_pubblicazione DESC;"
+        "query": "SELECT Opera.nome, Opera.anno_pubblicazione FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN Artista ON Artista.ID = Crea.artista WHERE Artista.cognome = 'Monet' ORDER BY anno_pubblicazione DESC;"
     },
     {
         "db_id": "galleria",
         "original": "Dimmi il nome ed il cognome degli artisti che espongono nel museo 'Barnes Foundation' ordinate in ordine alfabetico per il cognome",
-        "query": "SELECT artista.nome, artista.cognome FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE Opera.id_museo = 'Barnes Foundation' ORDER BY artista.cognome;"
+        "query": "SELECT Artista.nome, Artista.cognome FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN Artista ON Artista.ID = Crea.artista WHERE Opera.id_museo = 'Barnes Foundation' ORDER BY Artista.cognome;"
     },
     {
         "db_id": "galleria",
         "original": "Dimmi le opere ad acquarello ed olio su tela che ha fatto monet e dove sono esposte ordinate per titolo",
-        "query": "SELECT Opera.nome, Opera.id_museo FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN artista ON artista.ID = Crea.artista WHERE artista.cognome = 'Monet' AND Opera.tecnica IN ('acquarello', 'olio su tela') ORDER BY Opera.nome;"
+        "query": "SELECT Opera.nome, Opera.id_museo FROM Opera JOIN Crea ON Opera.ID = Crea.opera JOIN Artista ON Artista.ID = Crea.artista WHERE Artista.cognome = 'Monet' AND Opera.tecnica IN ('acquarello', 'olio su tela') ORDER BY Opera.nome;"
     },
     {
         "db_id": "farmacia",
