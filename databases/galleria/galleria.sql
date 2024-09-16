@@ -80,7 +80,7 @@ insert into Crea (opera, artista,committente) values (9, 5, NULL);
 insert into Crea (opera, artista,committente) values (10, 8, NULL);
 insert into Crea (opera, artista,committente) values (11, 4, NULL);
 insert into Crea (opera, artista,committente) values (12, 4, NULL);
-insert into Crea (opera, artista,committente) values (13, 6, NULL);
+insert into Crea (opera, artista,committente) values (13, 6, 'Ščukin');
 insert into Crea (opera, artista,committente) values (14, 6, NULL);
 insert into Crea (opera, artista,committente) values (15, 6, NULL);
 insert into Crea (opera, artista,committente) values (16, 7, NULL);
