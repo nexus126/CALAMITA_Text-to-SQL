@@ -7,7 +7,7 @@ from sqlalchemy import exc
 
 def read_queries(dataframe):    #takes empty dataframe as input
 
-    database_list=["voli","coronavirus","recensioni","hackathon"]
+    database_list=["voli","coronavirus","recensioni","hackathon","bowling","galleria","pratica","farma","farmacia","centri"]
 
     data = []
 
@@ -98,7 +98,8 @@ def compare_results(cursor_result_1,cursor_result_2):   #compare gold query and 
 
 def execute_queries():
 
-    database_list = ["voli","coronavirus","recensioni","hackathon"]
+    #MODIFY IF YOU GENERATED QUERIES JUST FOR SOME DATABASES
+    database_list = ["voli","coronavirus","recensioni","hackathon","bowling","galleria","pratica","farma","farmacia","centri"]
 
     for db in database_list:
 
@@ -174,3 +175,4 @@ accuracy_by_db.columns = ['Database', 'Accuracy']
 
 print("ACCURACY BY DB:")
 print(accuracy_by_db.to_string(index=False))
+
