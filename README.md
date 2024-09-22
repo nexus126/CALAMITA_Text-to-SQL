@@ -3,7 +3,7 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 
 # Database Import Procedure:
 
-- you should download the Termite folder wich is a zip file that needs to be decrypted with password "youshallnotpass".
+- you should download the Termite folder which is a zip file that needs to be decrypted with password "youshallnotpass".
 - inside the Termite folder there is another folder called "database" containing another folder for each database of the dataset.
 - each database folder contains 2 files named *db.sql, no_insert_*db.sql) where *db is the name of each database. There are 10 databases included (bowling, centri, coronavirus, voli ...)
 - each *db.sql file contains the dump that you need to load on your sql environment. The *db.sql file include the creation of the schema (table,columns and keys) and a set of data insert.
