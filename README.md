@@ -29,7 +29,7 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 # Memorize generated queries:
 - after the submission of each translation prompt the model should return a text containing the sql query.
 - the element to be evaluated is just the sql query, so it's needed a method (possibly a python script) to extract the just the sql code from the text response. This method can vary from one model to another.
-- in this case all generated queries needs to be stored inside a txt files in the following folder \eval\db_.
+- in this case all generated queries needs to be stored inside a txt files in the following folder \evaluation\db_dir\db_name as the name predict.txt.
 
 # Text-to-SQL Evaluation:
 - after the submission of each translation prompt the model should return a text containing the sql query.
