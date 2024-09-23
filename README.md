@@ -47,6 +47,7 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 - the script will report at the end the execution accuracy over all the database and the execution accuracy for each database.  
   
 CREDITS:
+
 This repository was created by Federico Ranaldi with the collaboration of Human-Centric Art Team for building Termite Dataset.
 
 
