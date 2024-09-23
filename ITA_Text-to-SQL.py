@@ -1,6 +1,8 @@
 #it's essential to refer to the full repository for a more comprehensive understanding of the dataset and evaluation methods.
 #in particular take a look at readme.md and \evaluation\instructions.txt
 
+#dataset is available at this repository. Extract it from Termite.zip file using password "youshallnotpass"
+
 OUTPUT_TYPE = "open-ended"
 
 #sql database dumps are available in the repository under Termite/databases/ folder and are named [no_insert_*db.sql] where *db is the name of a database
