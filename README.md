@@ -46,8 +46,9 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 - hence , given a db stored in local environment, the evaluation script will compare the records returned by the gold sql queries file and the records returned by the generated sql queries file (that is basically Execution Accuracy).
 - the script will report at the end the execution accuracy over all the database and the execution accuracy for each database.  
   
+#Authors
 
-
+This repository was created by Federico Ranaldi with the collaboration of Human-Centric Art Team for building Termite Dataset.
 
 
 
