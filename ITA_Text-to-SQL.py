@@ -9,5 +9,7 @@ PROMPT_1_TEMPLATE = """Considera il seguente database : {DUMP SQL}"""
 #nl query are retrievable in repository in Termite/queries.json where all natural language queries are stored
 PROMPT_2_TEMPLATE = """Traduci in SQL la seguente query in linguaggio naturale : {NL QUERY}"""
 
+#output of PROMPT_2_TEMPLATE must be processed in order to be feeded to the evaluation script \evaluation\evaluation.py
+
 #evaluation can be executed by running evaluation.py under \evaluation
 EVALUATION_METRIC = ["execution accurracy"]
