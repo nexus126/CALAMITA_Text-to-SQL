@@ -48,8 +48,11 @@ This repository contains the instruction for evaluating Text-to-SQL performances
   
 CREDITS:
 
-This repository was created by [Federico Ranaldi](https://scholar.google.com/citations?user=4hU1e4AAAAAJ&hl=en) with the collaboration of Human-Centric Art Team for building Termite Dataset.
+This repository was created by [Federico Ranaldi](https://scholar.google.com/citations?user=4hU1e4AAAAAJ&hl=en) with the collaboration of [Human-Centric Art](https://www.researchgate.net/lab/Human-Centric-ART-Tor-Vergata-Fabio-Massimo-Zanzotto) for building Termite Dataset.
 
+CONTACTS:
+
+federico.ranaldi99@gmail.com
 
 
 
