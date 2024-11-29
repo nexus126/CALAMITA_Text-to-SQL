@@ -49,6 +49,7 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 CREDITS:
 
 This repository was created by [Federico Ranaldi](https://scholar.google.com/citations?user=4hU1e4AAAAAJ&hl=en) with the collaboration of [Human-Centric Art](https://www.researchgate.net/lab/Human-Centric-ART-Tor-Vergata-Fabio-Massimo-Zanzotto) for building Termite Dataset.
+In addiction there is a [paper](https://github.com/nexus126/CALAMITA_Text-to-SQL/blob/main/CLIC2024_paper.pdf) on Termite Dataset presented at the [CLIC-it 2024](https://clic2024.ilc.cnr.it/) conference held at Institute Of Computational Linguistics "Antonio Zampolli" (CNR,Pisa).
 
 CONTACTS:
 
