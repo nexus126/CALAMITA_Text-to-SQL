@@ -1,10 +1,10 @@
 # CALAMITA_Text-to-SQL
-This repository contains the instruction for evaluating Text-to-SQL performances achieved by a language model on Termite Dataset.
+This repository contains the instruction for evaluating Text-to-SQL performances achieved by a language model on #Termite Dataset.
 
 # Database Import Procedure:
 
-- you should download the Termite folder which is a zip file ("Termite.zip") that needs to be decrypted with password "youshallnotpass".
-- inside the Termite folder there is another folder called "database" containing another folder for each database of the dataset.
+- you should download the #Termite folder which is a zip file ("Termite.zip") that needs to be decrypted with password "youshallnotpass".
+- inside the #Termite folder there is another folder called "database" containing another folder for each database of the dataset.
 - each database folder contains 2 files named *db.sql, no_insert_*db.sql) where *db is the name of each database. There are 10 databases included (bowling, centri, coronavirus, voli ...)
 - each *db.sql file contains the dump that you need to load on your sql environment. The *db.sql file include the creation of the schema (table,columns and keys) and a set of data insert.
 - each no_insert_*db.sql file contains the dump without the data insert. The content of this file will be used to generate the prompt.
@@ -12,7 +12,7 @@ This repository contains the instruction for evaluating Text-to-SQL performances
 
 # Text-to-SQL Prompt Template:
 
-- inside Termite folder there is a json file queries.json.
+- inside #Termite folder there is a json file queries.json.
 - queries.json contains a series of items featured by 3 fields ("db_id","original","query").
 - each item of query.json includes an query in Italian ("original" field), describing a specific data retrieval task, and the corresponding query in SQL (also known as gold query) executable on a relational database referred on "db_id" field.
 - in order to build the Text-to-SQL prompt you just need the original natural language queries.
@@ -48,9 +48,9 @@ This repository contains the instruction for evaluating Text-to-SQL performances
   
 CREDITS:
 
-This repository was created by [Federico Ranaldi](https://scholar.google.com/citations?user=4hU1e4AAAAAJ&hl=en) with the collaboration of [Human-Centric Art](https://www.researchgate.net/lab/Human-Centric-ART-Tor-Vergata-Fabio-Massimo-Zanzotto) for building Termite Dataset.
+This repository was created by [Federico Ranaldi](https://scholar.google.com/citations?user=4hU1e4AAAAAJ&hl=en) with the collaboration of [Human-Centric Art](https://www.researchgate.net/lab/Human-Centric-ART-Tor-Vergata-Fabio-Massimo-Zanzotto) for building #Termite Dataset.
 
-In addiction there is a [paper](https://github.com/nexus126/CALAMITA_Text-to-SQL/blob/main/CLIC2024_paper.pdf) on Termite Dataset presented at the [CLIC-it 2024](https://clic2024.ilc.cnr.it/) conference held at Institute Of Computational Linguistics "Antonio Zampolli" (CNR,Pisa).
+In addiction there is a [paper](https://github.com/nexus126/CALAMITA_Text-to-SQL/blob/main/CLIC2024_paper.pdf) on #Termite Dataset presented at the [CLIC-it 2024](https://clic2024.ilc.cnr.it/) conference held at Institute Of Computational Linguistics "Antonio Zampolli" (CNR,Pisa).
 
 CONTACTS:
 
